@@ -19,7 +19,7 @@ def get_version():
 
 
 setup(
-    name='s3transfer',
+    name='s3transfer-test-one',
     version=get_version(),
     description='An Amazon S3 Transfer Manager',
     long_description=open('README.rst').read(),
