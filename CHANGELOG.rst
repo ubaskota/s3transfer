@@ -2,6 +2,25 @@
 CHANGELOG
 =========
 
+0.19.0
+======
+
+* feature:``s3``: Update multi-part copy logic to match single-part behavior for TaggingDirective and AnnotationDirective
+* enhancement:``s3``: Warn when Metadata or Tagging is supplied to a copy without the corresponding directive set to REPLACE, in which case the supplied value is silently ignored. This matches the CopyObject behavior.
+
+
+0.18.0
+======
+
+* feature:Copy: By default, preserve source object metadata during multipart copies to match single CopyObject behavior.
+
+
+0.17.1
+======
+
+* enhancement:``s3``: Skip the HEAD request during S3 downloads when the client is configured with ``response_checksum_validation='when_required'``, reducing latency for small-object transfers. The HEAD request remains in place by default to enable full-object checksum validation.
+
+
 0.17.0
 ======
 
